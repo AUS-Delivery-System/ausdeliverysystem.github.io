@@ -32,9 +32,6 @@ window.onload = function ()
     });
 
 
-
-
-
 function calculateRow(row) {
     var price = +row.find('input[name^="price"]').val();
 
@@ -116,4 +113,33 @@ function showItems()
     }
     else
         document.getElementById("navbarToggler").style.display = "block";
+}
+
+function validateInfo()
+{
+    var flag = true;
+    console.log("In function");
+    console.log(document.getElementById("vPassword").value);
+    if(document.getElementById("vPassword").value !=document.getElementById("vPassword").value){
+        console.log("In function if3");
+        flag = false;
+        //outline in red
+        //onhover confirmpass, 'Passwords do not match'
+    }
+
+    let temp = document.getElementById("vPassword").value;
+
+    if(temp.length<8){
+        flag = false;
+    }
+    if(!(temp.match(/[a-z]/) && temp.match(/[A-Z]/) && temp.match(/[0-9]/))){
+        flag = false;
+    }
+
+    if(!flag){
+        alert("W");
+    }
+    else {
+        document.getElementById("volunteerForm").submit();
+    }
 }

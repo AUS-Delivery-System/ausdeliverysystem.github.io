@@ -64,7 +64,12 @@
                     <input type="text" class="form-control" id="vphoneNumber" placeholder="Phone Number" name="vphoneNumber" required>
                 </div>
             </div>
-            <div class="form-row" method ="post">
+            <div class="form-group col-md-12">
+                <div class="alert alert-danger">
+                    <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
+                  </div>
+            </div>
+            <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="vPassword">Password</label>
                     <input type="password" class="form-control" id="vPassword" placeholder="Password" name="vPassword" required>
@@ -108,7 +113,7 @@
                     </label>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary" id = "vSubmit">Create Account</button>
+            <button type="button" class="btn btn-primary" id = "vSubmit" onclick="validateInfo()">Create Account</button>
         </form>
 <!--
 User enters business name
