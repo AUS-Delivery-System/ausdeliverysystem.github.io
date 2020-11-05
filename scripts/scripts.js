@@ -1,5 +1,6 @@
 window.onload = function () 
 {
+    document.getElementById("vError").style.display = "none";
     document.getElementById("volunteerForm").style.display = "none";
     document.getElementById("foodForm").style.display = "none";
     document.getElementById("bankForm").style.display = "none";
@@ -30,10 +31,6 @@ window.onload = function ()
             counter--;
         }
     });
-
-
-
-
 
 function calculateRow(row) {
     var price = +row.find('input[name^="price"]').val();
@@ -116,4 +113,58 @@ function showItems()
     }
     else
         document.getElementById("navbarToggler").style.display = "block";
+}
+
+function vValidate()
+{
+    var msg;
+   let x =  (document.getElementById("vPasswordConfirm").val()==document.getElementById("vPassword").val());
+   if (!x)
+   { alert();
+    document.getElementById("vPasswordConfirm").css("border", "red solid 1px");
+    
+   }
+}
+function validateInfo()
+{
+    var flag = true;
+    var msg = "";
+    //clear
+    
+    //Either mindfuck with append and remove orrrr just tooltip
+
+    let gg = '<strong>Error!</strong> ';
+    console.log("In function");
+    console.log(document.getElementById("vPassword").value);
+    if(document.getElementById("vPassword").value != document.getElementById("vPasswordConfirm").value){
+        document.getElementById("vError").style.display = "block";
+        msg += "Passwords do not match. ";
+        flag = false;
+    }
+
+    let temp = document.getElementById("vPassword").value;
+
+    if(temp.length<8){
+        document.getElementById("vError").style.display = "block";
+        msg += "Password must be atleast 8 characters. ";        
+        flag = false;
+    }
+    if(!(temp.match(/[a-z]/) && temp.match(/[A-Z]/) && temp.match(/[0-9]/))){
+        document.getElementById("vError").style.display = "block";
+        msg += "Passwords must include lower-case letter, upper-case letter, and number.";        
+        
+        flag = false;
+    }
+
+    if(!flag){
+        alert("W");
+        $("#passError").html(gg + msg);
+    }
+    else {
+        document.getElementById("volunteerForm").submit();
+    }
+}
+function validateAll()
+{
+    vValidate();
 }
