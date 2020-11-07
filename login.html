@@ -12,274 +12,58 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="scripts/scripts.js"></script>
+    <script src="scripts/registerScript.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="icon" type="image/png" href='img/logo.png'>
     <link rel="stylesheet" href="style/style.css">
 </head>
-<!-- Volunteer registration form -->
-
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <p class="navbar-brand text-center" style="font-size: xx-large; font-family: 'Times New Roman', Times, serif;"
-            href="#"><i class="fa fa-user-circle"></i>Registration</p>
-        <button class="navbar-toggler" type="button" onclick="showItems();">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarToggler" style="font-family: 'Times New Roman', Times, serif;">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 text-md">
-                <li class="nav-item" style="margin-bottom: 10px; margin-left: 10px;">
-                    <button type="button" class="btn btn-outline-primary"
-                        onclick="registerVolunteer();"><b>Volunteer</b></button>
-                </li>
-                <li class="nav-item" style="margin-bottom: 10px;margin-left: 10px;">
-                    <button type="button" class="btn btn-outline-primary" onclick="registerOutlet();"><b>Food
-                            Outlet</b></button>
-                </li>
-                <li class="nav-item" style="margin-bottom: 10px;margin-left: 10px;">
-                    <button type="button" class="btn btn-outline-primary" onclick="registerFoodBank();"><b>Food
-                            Bank</b></button>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <form id="volunteerForm" method="post">
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="vFirstName">First Name</label>
-                <input type="text" class="form-control" id="vFirstName" name="vFirstName" placeholder="First Name"
-                    required>
+    
+         <div class="login-main-text">
+            <a class="navbar-brand" href="home.html"><img src="img/logo-white.png" alt="logo" style="position:absolute; top: 5px; left: 2%; margin-bottom: 10%; width : 100px; height:auto; "></a>
+           
+         </div>
+      
+         <div class="col-md-6 col-sm-12">
+            <div class="login-main-text">
+                <h2>Food Delivery System<br> Login Page</h2>
+                <p>Login here to access our service.</p>
             </div>
-            <div class="form-group col-md-6">
-                <label for="vLastName">Last Name</label>
-                <input type="text" class="form-control" id="vLastName" name="vLastName" placeholder="Last Name"
-                    required>
+            <div class="login-form">
+               <form>
+                   <div class="form-row">
+                  <div class="form-group col-md-6">
+                     <label><strong>User Name</strong></label>
+                     <input type="text" class="form-control" placeholder="User Name" id ="username">
+                  </div>
+                   </div>
+                   
+                   <div class="form-row">
+                    <div class="form-group col-md-6">
+                       <label><strong>Password</strong></label>
+                       <input type="password" class="form-control" placeholder="Password" id ="password">
+                    </div>
+                     </div>
+                    
+                     <div class="form-row">
+                        <button type="submit" class="btn btn-primary">Login</button>
+                        <br><br>
+                     </div>
+                    
+                     <div class="form-row">
+                        <p>Don't have an account? <a href="/registration.html">Register Here</a></p>
+                        
+                     </div>
+                     <div class="form-row">
+                        <p>Visit <a href="/registration.html">Register Here</a></p>
+                     </div>
+               </form>
             </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="vEmail">Email volunteer</label>
-                <input type="email" class="form-control" id="vEmail" placeholder="Email" name="vEmail" required>
-            </div>
-            <div class="form-group col-md-6">
-                <label for="vphoneNumber">Phone Number</label>
-                <input type="text" class="form-control" id="vphoneNumber" placeholder="Phone Number" name="vphoneNumber"
-                    required>
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="vPassword">Password</label>
-                <input type="password" class="form-control" id="vPassword" placeholder="Password" name="vPassword"
-                    required>
-            </div>
-            <div class="form-group col-md-6">
-                <label for="vPasswordConfirm">Confirm Password</label>
-                <input type="password" class="form-control" id="vPasswordConfirm" placeholder="Confirm Password"
-                    name="vPasswordConfirm" required oninput="vValidate()">
-            </div>
-        </div>
-        <div>
-            <div id = "vError" class="alert alert-danger alert-dismissible fade show" style="width: 100%; text-align: center;">
-                <button type="button" class="close" data-dismiss="alert">&times;</button>
-                <div id="passError"> 
-                 </div>
-              </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-4">
-                <label for="vGender">Gender</label>
-                <select id="vGender" name="vGender" class="form-control" required>
-                    <option selected>Male</option>
-                    <option>Female</option>
-                    <option>Other</option>
-                </select>
-            </div>
-            <div class="form-group col-md-4">
-                <label for="vEmirates">Emirates</label>
-                <select id="vEmirates" name="vEmirates" class="form-control" required>
-                    <option selected>Sharjah</option>
-                    <option>Dubai</option>
-                    <option>Ajman</option>
-                    <option>Abu Dhabi</option>
-                    <option>Umm al Quwain</option>
-                    <option>Ras al Khaimah</option>
-                    <option>Fujairah</option>
-                </select>
-            </div>
-            <div class="form-group col-md-4">
-                <label for="vDateOfBirth">Date of Birth</label>
-                <input type="date" class="form-control" id="vDateOfBirth" name="vDateOfBirth" required>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="vGridCheck" required>
-                <label class="form-check-label" for="vGridCheck">
-                    <a>Accept <a href="https://www.termsfeed.com/live/5095df1b-59c8-4792-b50e-02553d47da43">Terms of
-                            Service</a></a>
-                </label>
-            </div>
-        </div>
-        <button type="button" class="btn btn-primary" id="vSubmit" onclick="validateInfo()">Create Account</button>
-    </form>
+         </div>
 
-    <!--
-User enters business name
-User enters email address
-User enters phone number
-    7. User enters branch(es) names
-    8. User enters branch(es) location(s)
-    [name][address]
-    [name][address]
-    [name][address]
-    -->
-
-    <form id="foodForm">
-        <div class="form-row">
-            <div class="form-group col-md-12">
-                <label for="oBusinessName">Business Name</label>
-                <input type="text" class="form-control" id="oBusinessName" placeholder="Business Name"
-                    name="oBusinessName" required>
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="oEmail">Business Email</label>
-                <input type="email" class="form-control" id="oEmail" placeholder="Email" name="oEmail" required>
-            </div>
-            <div class="form-group col-md-6">
-                <label for="oPhoneNumber">Phone Number</label>
-                <input type="text" class="form-control" id="oPhoneNumber" placeholder="Phone Number" name="oPhoneNumber"
-                    required>
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="vPassword">Password</label>
-                <input type="password" class="form-control" id="vPassword" placeholder="Password" name="vPassword"
-                    required>
-            </div>
-            <div class="form-group col-md-6">
-                <label for="vPasswordConfirm">Confirm Password</label>
-                <input type="password" class="form-control" id="vPasswordConfirm" placeholder="Confirm Password"
-                    name="vPasswordConfirm" required>
-            </div>
-        </div>
-        <table id="myTable" class=" table order-list">
-            <thead>
-                <tr>
-                    <td style="text-align:center">Name</td>
-                    <td style="text-align:center">Address</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="col-sm-5 text-center">
-                        <input type="text" name="name" class="form-control" required />
-                    </td>
-                    <td class="col-sm-5 text-center">
-                        <input type="text" name="address" class="form-control" required />
-                    </td>
-                    <td class="col-sm-2 text-center"><input type="button" class="ibtnDel btn btn-md btn-danger"
-                            id="delete" value="Delete"></td>
-                </tr>
-
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="5" style="text-align: left;">
-                        <div class="alert alert-danger" role="alert" id="stop_it" style="text-align: center;">You must
-                            have at least one branch!</div>
-                        <input type="button" class="btn btn-lg btn-block btn-primary" id="addrow" value="Add Branch" />
-                    </td>
-                </tr>
-                <tr>
-                </tr>
-            </tfoot>
-        </table>
-        <div class="form-group">
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="vGridCheck" required>
-                <label class="form-check-label" for="vGridCheck">
-                    <a>Accept <a href="https://www.termsfeed.com/live/5095df1b-59c8-4792-b50e-02553d47da43">Terms of
-                            Service</a></a>
-                </label>
-            </div>
-        </div>
-        <button type="submit" class="btn btn-primary" id="vSubmit">Create Account</button>
-    </form>
-    <!--
-        User enters foundation name
-        User enters email address
-        User enters phone number
-        User enters password
-        User enters foundation location
-        !-->
-    <form id="bankForm" method="post">
-        <div class="form-row">
-            <div class="form-group col-md-12">
-                <label for="bBusinessName">Foundation Name</label>
-                <input type="text" class="form-control" id="bBusinessName" placeholder="Foundation Name"
-                    name="bBusinessName" required>
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="bEmail">Business Email</label>
-                <input type="email" class="form-control" id="bEmail" placeholder="Email" name="bEmail" required>
-            </div>
-            <div class="form-group col-md-6">
-                <label for="bPhoneNumber">Phone Number</label>
-                <input type="text" class="form-control" id="bPhoneNumber" placeholder="Phone Number" name="bPhoneNumber"
-                    required>
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="bPassword">Password</label>
-                <input type="password" class="form-control" id="bPassword" placeholder="Password" name="bPassword"
-                    required>
-            </div>
-            <div class="form-group col-md-6">
-                <label for="bPasswordConfirm">Confirm Password</label>
-                <input type="password" class="form-control" id="bPasswordConfirm" placeholder="Confirm Password"
-                    name="bPasswordConfirm" required>
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-8">
-                <label for="bAddress">Address</label>
-                <input type="text" class="form-control" id="bAddress" name="bAddress" placeholder="1234 Main St"
-                    required>
-            </div>
-            <div class="form-group col-md-4">
-                <label for="vEmirates">Emirates</label>
-                <select id="vEmirates" name="vEmirates" class="form-control" required>
-                    <option selected>Sharjah</option>
-                    <option>Dubai</option>
-                    <option>Ajman</option>
-                    <option>Abu Dhabi</option>
-                    <option>Umm al Quwain</option>
-                    <option>Ras al Khaimah</option>
-                    <option>Fujairah</option>
-                </select>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="vGridCheck" required>
-                <label class="form-check-label" for="vGridCheck">
-                    <a>Accept <a href="https://www.termsfeed.com/live/5095df1b-59c8-4792-b50e-02553d47da43">Terms of
-                            Service</a></a>
-                </label>
-            </div>
-        </div>
-        <button type="submit" class="btn btn-primary" id="vSubmit">Create Account</button>
-    </form>
-    <p style="text-align:center">Already have an account? <a href="#">Log in here!</a></p>
+      
 </body>
 
 </html>
