@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Outlet App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/tasks.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet"
+    href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css"
+    type="text/css" />
+    <link rel="stylesheet" href="style/mapstyle.css">
+    <link rel="icon" type="image/png" href='img/inCupNoText.png'>
+
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="home.html">
+                    <h2>Food Donation System</h2>
+                </a>
+            </div>
+            <div class="rightSideNav">
+                <ul class="nav navbar-nav">
+                    <li><a href="#ViewTasks" onClick="showTasks()" id="tasks"><span
+                                class="glyphicon glyphicon-edit"></span> View Tasks</a></li>
+                    <li><a href="#Support" onClick="showSupport()" id="support"><span
+                                class="glyphicon glyphicon-question-sign"></span>Support</a></li>
+                    <li><a href="#Settings" onClick="showSettings()" id="settings"><span
+                                class="glyphicon glyphicon-cog"></span> Settings</a></li>
+                    <li><a href="home.html"><span class="glyphicon glyphicon-log-out"></span> Sign Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <h2 style="padding-left: 2%; padding-right: 2%;">Welcome back <strong>Dunkin Donuts!</strong></h2>
+    <div id="ongoingTask">
+        <div>
+            <h2 style="padding-left: 2%; padding-right: 2%;"><strong>Upcoming Pickup:</strong> Volunteer Ahmad picking up Task ID 1 to Nefsy Food Bank.</h2>
+        </div>
+
+    </div>
+    <div id="viewTasks">
+        <div class="container-xl" style="padding-left: 2%; padding-right: 2%;">
+            <div class="table-responsive">
+                <div class="table-wrapper">
+                    <div class="table-title">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h2><b>Available Stock</b></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Food Outlet Location</th>
+                                <th>Food Name</th>
+                                <th>Food Amount</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <th>ENOC 1088 - Oud Metha Rd - Za'abeel Za'abeel 1 - Dubai</th>
+                                <th>Chocolate Dip Donut</th>
+                                <th>18</th>
+                                <th>Taken</th>
+                                <td>
+                                    <a onclick="claimTask();" href="#editEmployeeModal" class="edit"><i
+                                            class="glyphicon glyphicon-ok" title="Mark Picked Up"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <th>ENOC 1088 - Oud Metha Rd - Za'abeel Za'abeel 1 - Dubai</th>
+                                <th>Grilled Chicken Sandwich</th>
+                                <th>4</th>
+                                <th>Available</th>
+                                <td>
+                                    <a onclick="moreInfo();" href="#editEmployeeModal" class="edit"><i
+                                            class="glyphicon glyphicon-minus" title="Delete"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <th>ENOC 1088 - Oud Metha Rd - Za'abeel Za'abeel 1 - Dubai</th>
+                                <th>Bavarian Donut</th>
+                                <th>6</th>
+                                <th>Available</th>
+                                <td>
+                                    <a onclick="moreInfo();" href="#editEmployeeModal" class="edit"><i
+                                            class="glyphicon glyphicon-minus" title="Delete"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <th>1 Financial Center Rd - Downtown Dubai - Dubai</th>
+                                <th>Chocolate Dip Donut</th>
+                                <th>12</th>
+                                <th>Available</th>
+                                <td>
+                                    <a onclick="moreInfo();" href="#editEmployeeModal" class="edit"><i
+                                            class="glyphicon glyphicon-minus" title="Delete"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>5</th>
+                                <th>1 Financial Center Rd - Downtown Dubai - Dubai</th>
+                                <th>Grilled Chicken Sandwich</th>
+                                <th>6</th>
+                                <th>Available</th>
+                                <td>
+                                    <a onclick="moreInfo();" href="#editEmployeeModal" class="edit"><i
+                                            class="glyphicon glyphicon-minus" title="Delete"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="clearfix">
+                        <div class="hint-text">Showing <b>5</b> out of <b>13</b> entries</div>
+                        <ul class="pagination">
+                            <li class="page-item disabled"><a href="#">Previous</a></li>
+                            <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                            <li class="page-item"><a href="#" class="page-link">2</a></li>
+                            <li class="page-item"><a href="#" class="page-link">3</a></li>
+                            <li class="page-item"><a href="#" class="page-link">Next</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Edit Modal HTML -->
+    <div id="addEmployeeModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">
+                        <h4 class="modal-title">Add Employee</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Address</label>
+                            <textarea class="form-control" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                        <input type="submit" class="btn btn-success" value="Add">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Edit Modal HTML -->
+    <div id="editEmployeeModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">
+                        <h4 class="modal-title">Edit Employee</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Address</label>
+                            <textarea class="form-control" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                        <input type="submit" class="btn btn-info" value="Save">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Delete Modal HTML -->
+    <div id="deleteEmployeeModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">
+                        <h4 class="modal-title">Delete Employee</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you want to delete these Records?</p>
+                        <p class="text-warning"><small>This action cannot be undone.</small></p>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                        <input type="submit" class="btn btn-danger" value="Delete">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!--
+        fsdfssdf
+    -->
+
+
+    <form id="foodForm">
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label for="oBusinessName">Business Name</label>
+                <input type="text" class="form-control" id="oBusinessName" placeholder="Business Name"
+                    name="oBusinessName" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="oEmail">Business Email</label>
+                <input type="email" class="form-control" id="oEmail" placeholder="Email" name="oEmail" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="oPhoneNumber">Phone Number</label>
+                <input type="text" class="form-control" id="oPhoneNumber" placeholder="Phone Number" name="oPhoneNumber"
+                    required>
+            </div>
+        </div>
+        <div class="form-row" id="changePass">
+            <div class="form-group col-md-6">
+                <label for="oPassword">Password</label>
+                <input type="password" class="form-control" id="oPassword" placeholder="Password" name="oPassword"
+                    required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="oPasswordConfirm">Confirm Password</label>
+                <input type="password" class="form-control" id="oPasswordConfirm" placeholder="Confirm Password"
+                    name="oPasswordConfirm" required>
+            </div>
+        </div>
+        <table id="myTable" class=" table order-list">
+            <thead>
+                <tr>
+                    <td style="text-align:center">Name</td>
+                    <td style="text-align:center">Address</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="col-sm-5 text-center">
+                        <input type="text" name="name" class="form-control" required />
+                    </td>
+                    <td class="col-sm-5 text-center">
+                        <input type="text" name="address" class="form-control" required />
+                    </td>
+                    <td class="col-sm-2 text-center"><input type="button" class="ibtnDel btn btn-md btn-danger"
+                            id="delete" value="Delete"></td>
+                </tr>
+                <tr>
+                    <td class="col-sm-5 text-center">
+                        <input type="text" name="name" class="form-control" required />
+                    </td>
+                    <td class="col-sm-5 text-center">
+                        <input type="text" name="address" class="form-control" required />
+                    </td>
+                    <td class="col-sm-2 text-center"><input type="button" class="ibtnDel btn btn-md btn-danger"
+                            id="delete" value="Delete"></td>
+                </tr>
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5" style="text-align: left;">
+                        <input type="button" class="btn btn-lg btn-block btn-primary" id="addrow" value="Add Branch" />
+                    </td>
+                </tr>
+                <tr>
+                </tr>
+            </tfoot>
+        </table>
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <button type="button" class="btn btn-primary" id="pSubmit" onclick="passwordButton()">Change
+                    Password</button>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <button type="button" class="btn btn-primary" id="vSubmit" onclick="validateInfo()">Save
+                    Changes</button>
+            </div>
+        </div>
+    </form>
+
+
+
+
+    <form id="contactUs">
+        <div class="form-row text-center">
+            <div class="form-group col-md-12">
+                <h2>Contact us</h2>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" placeholder="Name" required id="name" name="name">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" placeholder="Email" required id="email" name="email">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label for="msg">Message</label>
+                <textarea class="form-control" rows="4" id="msg" name="msg" placeholder="Message" required></textarea>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <button type="submit" class="btn">Send!</button>
+            </div>
+        </div>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="scripts/outlet.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/codezero-mapify@1.0.1/dist/mapify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+  </script>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js">
+  </script>
+  <!-- Promise polyfill script required to use Mapbox GL Geocoder in IE 11 -->
+  <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+  <script src="scripts/routingO.js"></script>
+</body>
+
+</html>

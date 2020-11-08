@@ -1,0 +1,16 @@
+body{
+  height: 100%;
+}
+.location{
+  border-radius: 50%;
+  background-color: antiquewhite;
+}
+
+.map {
+  margin-top: 2%;
+  height: 500px;
+  width: 80%;
+  margin-bottom: 2%;
+  margin-left:2%;
+  margin-right:2%;
+}

@@ -164,7 +164,6 @@ function validateInfo() {
     }
 
     if (!flag) {
-        alert("W");
         $("#" + firstLetter + "passError").html(gg + msg);
     } else {
         if (document.getElementById("foodForm").style.display == "block") {
