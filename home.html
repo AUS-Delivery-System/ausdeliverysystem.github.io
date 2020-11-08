@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-    <!-- Theme Made By www.w3schools.com -->
-    <title>Bootstrap Theme Company Page</title>
+    <title>Homepage</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//db.onlinewebfonts.com/c/0b811799540d4b23474c8cd3c9576879?family=FF+Tisa+Sans" rel="stylesheet" type="text/css"/> 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
@@ -13,6 +13,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style/homeStyle.css">
+    <link rel="icon" type="image/png" href='img/inCupNoText.png'>
     <script src="scripts/homeScript.js"></script>
 </head>
 
@@ -26,24 +27,27 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="home.html"><img src="img/logo-white.png" alt="logo"
+                <a class="navbar-brand" href="home.html"><img src="img/notext.png" alt="logo"
                         style="height: 40px; position:absolute; top: 5px; left: 2%;"></a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#services">PARTNERS</a></li>
-                    <li><a href="#portfolio">MOTIVATION</a></li>
-                    <li><a href="#contactUs">CONTACT</a></li>
-                    <li><a href="login.html">SIGN IN</a></li>
+                    <li><a href="#about"><strong>ABOUT</strong></a></li>
+                    <li><a href="#services"><strong>PARTNERS</strong></a></li>
+                    <li><a href="#portfolio"><strong>MOTIVATION</strong></a></li>
+                    <li><a href="#contactUs"><strong>CONTACT</strong></a></li>
+                    <li><a href="login.html"><strong>SIGN IN</strong></a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <div class="jumbotron text-center">
-        <h1>Food Delivery System</h1>
-        <p>Help someone eat today!</p>
+
+
+
+        <h1>Food Donation System</h1>
+        <img src="img/inCupText.png"; class = "epic"  alt="logoPreview">
         <div style="color:white; text-align: center; display: inline;">
             <a href="registration.html" style="color:white;"><u>
                     <p style="font-size:25.6px; position: relative; bottom: 10px;"><em class="material-icons"
@@ -54,16 +58,28 @@
 
     <!-- Container (About Section) -->
     <div id="about" class="container-fluid">
-        <div class="row">
+        <div class="row after">
             <div class="col-sm-8">
                 <h2>How does it work?</h2><br>
                 <h4>Instead of wasting food in restaurants, the Delivery System helps providing the less fortunate
                     people with food by connecting restaurants and food charities. The link can be anyone, even you!
                     Sign up now and make the difference with us.</h4><br>
-                <br><button class="btn btn-default btn-lg"><a href="#contactUs">Get in Touch</a></button>
+                <br><a href="#contactUs"><h4 style="color:#007bff">Get in Touch</h4></a>
             </div>
             <div class="col-sm-4">
-                <span><img src="/img/howWork.png" alt="How It Works" style="width: 200px; height:200px"></span>
+                <span><img src="/img/Untitled.png" alt="How It Works" style="width: 200px; height:200px"></span>
+            </div>
+        </div>
+        <div class="row before">
+            <div class="col-sm-4">
+                <span><img src="/img/Untitled.png" alt="How It Works" style="width: 200px; height:200px"></span>
+            </div>
+            <div class="col-sm-8">
+                <h2>How does it work?</h2><br>
+                <h4>Instead of wasting food in restaurants, the Delivery System helps providing the less fortunate
+                    people with food by connecting restaurants and food charities. The link can be anyone, even you!
+                    Sign up now and make the difference with us.</h4><br>
+                <br><a href="#contactUs"><h4 style="color:#007bff">Get in Touch</h4></a>
             </div>
         </div>
     </div>
@@ -71,14 +87,14 @@
     <div class="container-fluid bg-grey">
         <div class="row">
             <div class="col-sm-4">
-                <span><img src="/img/values.png" alt="Our Values" style="width: 200px; height:200px"></span>
+                <span><img src="/img/mix.png" alt="Our Values" style="width: 200px; height:200px"></span>
             </div>
             <div class="col-sm-8">
                 <h2>Our Values</h2><br>
-                <h4><strong>MISSION:</strong> Our mission is to elimate food waste, helping out people in the community
+                <h4><strong style="color: #FF7F50">MISSION:</strong> Our mission is to elimate food waste, helping out people in the community
                     who are going through difficult times. No one should be worried about where their next meal is
                     coming from, and if they can afford it.</h4><br>
-                <h4><strong>VISION:</strong> We hope to one day eliminate food waste from all major food outlets,
+                <h4><strong style="color: #FF7F50">VISION:</strong> We hope to one day eliminate food waste from all major food outlets,
                     putting that food to good use, lowering the overall hunger and poverty issues faced by many around
                     us.</h4>
             </div>
@@ -90,36 +106,36 @@
         <h2>PARTNERS</h2>
         <br>
         <div class="row slideanim">
-            <div class="col-sm-4">
-                <span><img src="/img/dunkinLogo.png" alt="Dunkin Donuts" style="width: 150px; height:150px"></span>
+            <div class="col-sm-4" id = "dunkin">
+                <span><img src="/img/dunkinLogo.png" class = "foodServices" alt="Dunkin Donuts" style="width: 150px; height:150px"></span>
                 <h4>Dunkin Donuts</h4>
                 <p>Food Outlet</p>
             </div>
-            <div class="col-sm-4">
-                <span><img src="/img/mcdLogo.png" alt="McDonalds" style="width: 150px; height:150px"></span>
+            <div class="col-sm-4" id = "mcdnlds">
+                <span><img src="/img/mcdLogo.png" class = "foodServices" alt="McDonalds" style="width: 150px; height:150px"></span>
                 <h4>McDonald's</h4>
                 <p>Food Outlet</p>
             </div>
-            <div class="col-sm-4">
-                <span><img src="/img/laffahLogo.png" alt="Laffah" style="width: 150px; height:150px"></span>
+            <div class="col-sm-4" id = "laffah">
+                <span><img src="/img/laffahLogo.png" class = "foodServices" alt="Laffah" style="width: 150px; height:150px"></span>
                 <h4>Downtown Laffah</h4>
                 <p>Food Outlet</p>
             </div>
         </div>
         <br><br>
         <div class="row slideanim">
-            <div class="col-sm-4">
-                <span><img src="/img/food-use-bank.png" alt="Food Bank" style="width: 150px; height:150px"></span>
+            <div class="col-sm-4" id = "qouz">
+                <span><img src="/img/food-use-bank.png" class = "foodServices" alt="Food Bank" style="width: 150px; height:150px"></span>
                 <h4>Al Quoz, Dubai</h4>
                 <p>Food Bank</p>
             </div>
-            <div class="col-sm-4">
-                <span><img src="/img/nefsy.png" alt="Food Bank" style="width: 150px; height:150px"></span>
+            <div class="col-sm-4" id = "nefsy">
+                <span><img src="/img/nefsy.png" class = "foodServices" alt="Food Bank" style="width: 150px; height:150px"></span>
                 <h4>Nefsy, Dubai</h4>
                 <p>Food Bank</p>
             </div>
-            <div class="col-sm-4">
-                <span><img src="/img/dubai-no-bg.png" alt="Food Bank" style="width: 150px; height:150px"></span>
+            <div class="col-sm-4" id = "dca">
+                <span><img src="/img/dubai-no-bg.png" class = "foodServices" alt="Food Bank" style="width: 150px; height:150px"></span>
                 <h4 style="color:#303030;">Dubai Charity Association, Dubai</h4>
                 <p>Food Bank</p>
             </div>
@@ -178,23 +194,23 @@
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label for="name">Name*</label>
+                <label for="name">Name</label>
                 <input type="text" class="form-control" placeholder="Name" required id="name" name="name">
             </div>
             <div class="form-group col-md-6">
-                <label for="email">Email*</label>
+                <label for="email">Email</label>
                 <input type="email" class="form-control" placeholder="Email" required id="email" name="email">
             </div>
         </div>
         <div class="form-row">
             <div class="form-group col-md-12">
-                <label for="msg">Message*</label>
+                <label for="msg">Message</label>
                 <textarea class="form-control" rows="4" id="msg" name="msg" placeholder="Message" required></textarea>
             </div>
         </div>
         <div class="form-row">
             <div class="form-group col-md-12">
-                <button type="submit" class="btn btn-primary">Login</button>
+                <button type="submit" class="btn">Send!</button>
             </div>
         </div>
     </form>
@@ -206,11 +222,11 @@
             </a>
         </div>
 
-        <div>
+        <div style = "color: #404969">
             <p>Contact us and we'll get back to you within 24 hours.</p>
             <p><span class="glyphicon glyphicon-map-marker"></span> Sharjah United Arab Emirates</p>
             <p><span class="glyphicon glyphicon-phone"></span> +971 6-386-3424</p>
-            <p><span class="glyphicon glyphicon-envelope"></span> email@websute.com</p>
+            <p><span class="glyphicon glyphicon-envelope"></span> inquiry@foodDonationSystem.com</p>
         </div>
     </footer>
 

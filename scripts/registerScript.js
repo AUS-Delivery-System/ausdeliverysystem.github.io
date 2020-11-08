@@ -2,11 +2,13 @@ window.onload = function () {
     document.getElementById("vError").style.display = "none";
     document.getElementById("bError").style.display = "none";
     document.getElementById("oError").style.display = "none";
-    document.getElementById("volunteerForm").style.display = "none";
+    document.getElementById("volunteerForm").style.display = "block";
     document.getElementById("foodForm").style.display = "none";
     document.getElementById("bankForm").style.display = "none";
     document.getElementById("navbarToggler").style.display = "none";
     document.getElementById("stop_it").style.display = "none";
+    document.getElementById("footer").style.display = "block";
+    $("#vbtn").addClass("btnSelected");
     var counter = 0;
     $("#addrow").on("click", function () {
         document.getElementById("stop_it").style.display = "none";
@@ -49,14 +51,20 @@ window.onload = function () {
 function registerVolunteer() {
     if (document.getElementById("volunteerForm").style.display == "block") {
         document.getElementById("volunteerForm").style.display = "none";
+        $("#vbtn").removeClass("btnSelected");
+        document.getElementById("footer").style.display = "none";
     } else {
         if (document.getElementById("foodForm").style.display == "block") {
             document.getElementById("foodForm").style.display = "none";
+            $("#obtn").removeClass("btnSelected");
         }
         if (document.getElementById("bankForm").style.display == "block") {
             document.getElementById("bankForm").style.display = "none";
+            $("#fbtn").removeClass("btnSelected");
         }
         document.getElementById("volunteerForm").style.display = "block";
+        $("#vbtn").addClass("btnSelected");
+        document.getElementById("footer").style.display = "block";
     }
 }
 
@@ -64,28 +72,40 @@ function registerOutlet() //1
 {
     if (document.getElementById("foodForm").style.display == "block") {
         document.getElementById("foodForm").style.display = "none";
+        $("#obtn").removeClass("btnSelected");
+        document.getElementById("footer").style.display = "none";
     } else {
         if (document.getElementById("volunteerForm").style.display == "block") {
             document.getElementById("volunteerForm").style.display = "none";
+            $("#vbtn").removeClass("btnSelected");
         }
         if (document.getElementById("bankForm").style.display == "block") {
             document.getElementById("bankForm").style.display = "none";
+            $("#fbtn").removeClass("btnSelected");
         }
         document.getElementById("foodForm").style.display = "block";
+        $("#obtn").addClass("btnSelected");
+        document.getElementById("footer").style.display = "block";
     }
 }
 
 function registerFoodBank() {
     if (document.getElementById("bankForm").style.display == "block") {
         document.getElementById("bankForm").style.display = "none";
+        $("#fbtn").removeClass("btnSelected");
+        document.getElementById("footer").style.display = "none";
     } else {
         if (document.getElementById("volunteerForm").style.display == "block") {
             document.getElementById("volunteerForm").style.display = "none";
+            $("#vbtn").removeClass("btnSelected");
         }
         if (document.getElementById("foodForm").style.display == "block") {
             document.getElementById("foodForm").style.display = "none";
+            $("#obtn").removeClass("btnSelected");
         }
         document.getElementById("bankForm").style.display = "block";
+        $("#fbtn").addClass("btnSelected");
+        document.getElementById("footer").style.display = "block";
     }
 }
 
