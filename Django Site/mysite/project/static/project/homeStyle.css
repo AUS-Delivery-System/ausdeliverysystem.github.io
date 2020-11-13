@@ -1,0 +1,261 @@
+body {
+    font-family:"FF Tisa Sans";
+    line-height: 1.8;
+    color: #818181;
+  }
+  label
+{
+    font-size: 18px;
+    color: #FF7F50;
+    font-family:"FF Tisa Sans";
+}
+  form {
+      margin-top: 1.5%;
+      margin-right: 10%;
+      margin-left:10%;
+      margin-bottom: 27%;
+      font-family:"FF Tisa Sans";
+  }
+  textarea {
+    overflow-y: scroll;
+    height: 100px;
+    resize: none; /* Remove this if you want the user to resize the textarea */
+    font-family:"FF Tisa Sans";
+}
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #FF7F50;
+    font-weight: 600;
+    font-family:"FF Tisa Sans";
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #404969;
+    font-weight: 400;
+    margin-bottom: 30px;
+    font-family:"FF Tisa Sans";
+  }  
+  .jumbotron {
+    background-color:#FF7F50;
+    color: #e6f5fc;
+    padding: 100px 25px;
+    font-family:"FF Tisa Sans";
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #e6f5fc;
+  }
+  .logo-small {
+    color:#FF7F50;
+    font-size: 50px;
+  }
+  .logo {
+    color: #FF7F50;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #FF7F50;
+  }
+  .carousel-indicators li {
+    border-color: #FF7F50;
+    font-family:"FF Tisa Sans";
+  }
+  .carousel-indicators li.active {
+    background-color: #FF7F50;
+    font-family:"FF Tisa Sans";
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+    font-family:"FF Tisa Sans";
+  }
+  .item span {
+    font-style: normal;
+    font-family:"FF Tisa Sans";
+  }
+  .panel {
+    border: 1px solid #FF7F50; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+    font-family:"FF Tisa Sans";
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+    font-family:"FF Tisa Sans";
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #FF7F50;
+    background-color: #e6f5fc !important;
+    color: #FF7F50;
+    font-family:"FF Tisa Sans";
+  }
+  .panel-heading {
+    color:#e6f5fc !important;
+    background-color: #FF7F50 !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    font-family:"FF Tisa Sans";
+  }
+  .panel-footer {
+    background-color: white !important;
+    font-family:"FF Tisa Sans";
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+    font-family:"FF Tisa Sans";
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+    font-family:"FF Tisa Sans";
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #FF7F50;
+    color: #e6f5fc;
+    font-family:"FF Tisa Sans";
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: #FF7F50;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family:"FF Tisa Sans";
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #e6f5fc !important;
+    font-family:"FF Tisa Sans";
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #FF7F50 !important;
+    background-color: #e6f5fc !important;
+    font-family:"FF Tisa Sans";
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #e6f5fc !important;
+    font-family:"FF Tisa Sans";
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #FF7F50;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+    font-family:"FF Tisa Sans";
+  }
+  .centerMaform{
+      margin-left: 15%;
+      margin-right: 15%;
+      text-align: center;
+      font-family:"FF Tisa Sans";
+  }
+  .btn
+  {
+    background-color:#007bff;
+    color: White;
+    font-family:"FF Tisa Sans";
+  }
+  .btn:hover
+  {
+    background-color:#0069D9;
+    color: White;
+    font-family:"FF Tisa Sans";
+  }
+  .foodServices h4:hover
+  {
+    width: 115%;
+    height:auto;
+    font-size: 115%;
+  }
+
+  @media screen and (min-width: 1001px)
+  {.epic
+    {
+      color:white;
+      text-align: center;
+      display: inline;
+      width:500px;
+      height:auto;
+    }
+    .after
+    {
+      display: block;
+    }
+    .before
+    {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 1000px)
+  {.epic
+    {
+      margin-top: 10%;
+      color:white;
+      text-align: center;
+      display: inline;
+      width:82%;
+      height:auto;
+    }
+    .before
+    {
+      display: block;
+    }
+    .after
+    {
+      display: none;
+    }
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+ 

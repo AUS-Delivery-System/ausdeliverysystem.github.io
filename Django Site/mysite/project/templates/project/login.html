@@ -1,0 +1,114 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Login</title>
+    <meta name="description" content="" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="//db.onlinewebfonts.com/c/0b811799540d4b23474c8cd3c9576879?family=FF+Tisa+Sans"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="{%static 'project/scripts/loginScript.js'%}"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{%static 'project/img/inCupNoText.png'%}"
+    />
+    <link rel="stylesheet" href="{%static 'project/style.css'%}" />
+  </head>
+
+  <body>
+    <div class="login-main-text" style="text-align: center">
+      <a class="navbar-brand" href="{%url 'site-home'%}"
+        ><img src="{%static 'project/img/text.png'%}" alt="logo"
+      /></a>
+      <h2 style="position: absolute; top: 5%; left: 12%">
+        Food Donation System
+      </h2>
+    </div>
+    <form
+      action="#"
+      method="post"
+      id="loginForm"
+      style="background-color: white; padding: 10px; border-radius: 20px"
+    >
+      {% csrf_token %}
+      <div class="form-row">
+        <div
+          class="form-group col-md-12 text-center align-justify align-center"
+        >
+          <h3><strong>Welcome</strong></h3>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label><strong>Username</strong></label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Username"
+            id="username"
+            name="username"
+          />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label><strong>Password</strong></label>
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Password"
+            id="password"
+            name="password"
+          />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <button type="submit" class="btn btn-primary">Login</button>
+          <br /><br />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <p>
+            Don't have an account?
+            <a href="{%url 'site-registration'%}">Register Here</a>
+          </p>
+        </div>
+      </div>
+      <p>Return to <a href="{%url 'site-home'%}">Homepage</a>.</p>
+    </form>
+    <footer>
+      <a href="../#contactUs">Contact us!</a>
+    </footer>
+  </body>
+</html>
