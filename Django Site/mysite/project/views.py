@@ -1,7 +1,7 @@
 from django.shortcuts import redirect, render
 from django.http import HttpResponse
 import time
-from project.models import User, Volunteer, Bank, Outlet, Branches
+from .models import User, Volunteer, Bank, Outlet, Branches
 from django.contrib.auth.hashers import check_password, make_password
 from django.conf.urls import url
 
@@ -98,7 +98,7 @@ def registration(request):
                 print("NOT EMPTY SET")
                 return render(request, 'project/registration.html')
             else:
-                u = User(email=request.POST['bEmail'].lower(),password=request.POST['bPassword'],role="Outlet")
+                u = User(email=request.POST['bEmail'].lower(),password=request.POST['bPassword'],role="Bank")
                 u.save()
                 b = Bank(user=u,name=request.POST['bBusinessName'],address=request.POST['bAddress'],phonenumber=request.POST['bphoneNumber'],emirates=request.POST['bEmirates'],capacity=0)
                 b.save()
@@ -118,6 +118,7 @@ def registration(request):
         return render(request, 'project/registration.html')
 
 def login(request):
+    print("1")
     if (request.method == "POST"):
         username = request.POST['username']
         passWord = request.POST['password']
@@ -134,8 +135,16 @@ def login(request):
         print(str(username) + " " + str(passWord))
         print(str(username) + " " + str(passWord))
         print(str(username) + " " + str(passWord))
-        exists = User.objects.filter(email=username, password=passWord)
+        exists = User.objects.filter(email=username, password=passWord).first()
         if exists:
+            print("2")
+            tempRole = exists.role
+            if(tempRole == 'Volunteer'):
+                return redirect('../volunteer/')
+            elif(tempRole == 'Outlet'):
+                return redirect('../outlet/')
+            elif(tempRole == 'Bank'):
+                return redirect('../bank/')
             print("VALID LOGIN")
             print("VALID LOGIN")
             print("VALID LOGIN")
