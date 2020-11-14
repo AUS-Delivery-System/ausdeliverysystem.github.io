@@ -78,6 +78,17 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'defaultdb',
+        'USER': 'avnadmin',
+        'PASSWORD': 'u1kmxmzwuo6havo6',
+        'HOST': 'pg-2ded41ae-aus-c0fa.aivencloud.com',
+        'PORT': '18787',
+    }
+}
+'''
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postDB',
         'USER': 'postgres',
         'PASSWORD': 'root',
@@ -85,7 +96,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-
+'''
 '''
 DATABASES = {
     'default': {

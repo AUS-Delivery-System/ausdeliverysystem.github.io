@@ -21,7 +21,7 @@ $(document).ready(function () {
 
         zoom: 14
       });
-      
+
 
       var canvas = map.getCanvasContainer();
 
@@ -52,7 +52,7 @@ $(document).ready(function () {
               type: 'LineString',
               coordinates: route
             }
-           
+
           };
           console.log(geojson.geometry.coordinates[0]);
           // if the route already exists on the map, reset it using setData
@@ -92,7 +92,7 @@ $(document).ready(function () {
       map.on('load', function () {
         // make an initial directions request that
         // starts and ends at the same location
-          getRoute(start);
+        getRoute(start);
 
         // Add starting point to the map
         map.addLayer({
@@ -120,16 +120,16 @@ $(document).ready(function () {
         // this is where the code from the next step will go
       });
       var marker = new mapboxgl.Marker()
-.setLngLat(["25.219689", "55.313552"])
-.addTo(map);
+        .setLngLat(["25.219689", "55.313552"])
+        .addTo(map);
 
-var marker1 = new mapboxgl.Marker()
-.setLngLat(["25.3222620708", "55.3759618518"])
-.addTo(map);
-      map.on('click', function(e) {
+      var marker1 = new mapboxgl.Marker()
+        .setLngLat(["25.3222620708", "55.3759618518"])
+        .addTo(map);
+      map.on('click', function (e) {
         var coordsObj = e.lngLat;
         canvas.style.cursor = '';
-        var coords = Object.keys(coordsObj).map(function(key) {
+        var coords = Object.keys(coordsObj).map(function (key) {
           return coordsObj[key];
         });
         var end = {
@@ -141,8 +141,7 @@ var marker1 = new mapboxgl.Marker()
               type: 'Point',
               coordinates: coords
             }
-          }
-          ]
+          }]
         };
         if (map.getLayer('end')) {
           map.getSource('end').setData(end);
@@ -236,15 +235,15 @@ var marker1 = new mapboxgl.Marker()
 });
 
 
-function angleFromCoordinate(lat1,lon1,lat2,lon2) {
+function angleFromCoordinate(lat1, lon1, lat2, lon2) {
   var p1 = {
-      x: lat1,
-      y: lon1
+    x: lat1,
+    y: lon1
   };
 
   var p2 = {
-      x: lat2,
-      y: lon2
+    x: lat2,
+    y: lon2
   };
   // angle in radians
   var angleRadians = Math.atan2(p2.y - p1.y, p2.x - p1.x);
@@ -252,6 +251,5 @@ function angleFromCoordinate(lat1,lon1,lat2,lon2) {
   var angleDeg = Math.atan2(p2.y - p1.y, p2.x - p1.x) * 180 / Math.PI;
 
   return angleDeg;
-  
-}
 
+}

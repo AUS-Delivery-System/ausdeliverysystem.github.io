@@ -85,7 +85,7 @@
             <button
               type="button"
               class="btn btn1"
-              id="fbtn"
+              id="bbtn"
               onclick="registerFoodBank();"
             >
               <b>Food Bank</b>
@@ -96,6 +96,20 @@
     </nav>
     <form action="#" id="volunteerForm" method="post">
       {% csrf_token %}
+
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <div>
+            <div
+              id="vError"
+              class="alert alert-danger fade show"
+              style="width: 100%"
+            >
+              <div id="vpassError"></div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="vFirstName">First Name</label>
@@ -165,22 +179,10 @@
             placeholder="Confirm Password"
             name="vPasswordConfirm"
             required
-            oninput="vValidate()"
           />
         </div>
       </div>
-      <div>
-        <div
-          id="vError"
-          class="alert alert-danger alert-dismissible fade show"
-          style="width: 100%; text-align: center"
-        >
-          <button type="button" class="close" data-dismiss="alert">
-            &times;
-          </button>
-          <div id="vpassError"></div>
-        </div>
-      </div>
+
       <div class="form-row">
         <div class="form-group col-md-4">
           <label for="vGender">Gender</label>
@@ -267,6 +269,20 @@ User enters phone number
 
     <form action="#" id="foodForm" method="post">
       {% csrf_token %}
+
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <div>
+            <div
+              id="oError"
+              class="alert alert-danger fade show"
+              style="width: 100%"
+            >
+              <div id="opassError"></div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="form-row">
         <div class="form-group col-md-12">
           <label for="oBusinessName">Business Name</label>
@@ -293,13 +309,13 @@ User enters phone number
           />
         </div>
         <div class="form-group col-md-6">
-          <label for="oPhoneNumber">Phone Number</label>
+          <label for="ophoneNumber">Phone Number</label>
           <input
             type="text"
             class="form-control"
-            id="oPhoneNumber"
+            id="ophoneNumber"
             placeholder="Phone Number"
-            name="oPhoneNumber"
+            name="ophoneNumber"
             required
           />
         </div>
@@ -328,18 +344,7 @@ User enters phone number
           />
         </div>
       </div>
-      <div>
-        <div
-          id="oError"
-          class="alert alert-danger alert-dismissible fade show"
-          style="width: 100%; text-align: center"
-        >
-          <button type="button" class="close" data-dismiss="alert">
-            &times;
-          </button>
-          <div id="opassError"></div>
-        </div>
-      </div>
+
       <table id="myTable" class="table order-list">
         <thead>
           <tr>
@@ -350,12 +355,19 @@ User enters phone number
         <tbody>
           <tr>
             <td class="col-sm-5 text-center">
-              <input type="text" name="name0" class="form-control" required />
+              <input
+                type="text"
+                name="name0"
+                id="name0"
+                class="form-control"
+                required
+              />
             </td>
             <td class="col-sm-5 text-center">
               <input
                 type="text"
                 name="address0"
+                id="address0"
                 class="form-control"
                 required
               />
@@ -431,6 +443,19 @@ User enters phone number
       {% csrf_token %}
       <div class="form-row">
         <div class="form-group col-md-12">
+          <div>
+            <div
+              id="bError"
+              class="alert alert-danger fade show"
+              style="width: 100%"
+            >
+              <div id="bpassError"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-12">
           <label for="bBusinessName">Foundation Name</label>
           <input
             type="text"
@@ -455,13 +480,13 @@ User enters phone number
           />
         </div>
         <div class="form-group col-md-6">
-          <label for="bPhoneNumber">Phone Number</label>
+          <label for="bphoneNumber">Phone Number</label>
           <input
             type="text"
             class="form-control"
-            id="bPhoneNumber"
+            id="bphoneNumber"
             placeholder="Phone Number"
-            name="bPhoneNumber"
+            name="bphoneNumber"
             required
           />
         </div>
@@ -557,7 +582,7 @@ User enters phone number
         font-size: 16px;
       "
     >
-      Already have an account? <a href="{%url 'site-home'%}">Log in here!</a>
+      Already have an account? <a href="{%url 'site-login'%}">Log in here!</a>
     </p>
     <footer id="footer">
       <a href="{%url 'site-home'%}../#contactUs">Contact us!</a>

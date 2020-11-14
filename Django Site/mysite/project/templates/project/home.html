@@ -2,237 +2,412 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <title>Homepage</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="//db.onlinewebfonts.com/c/0b811799540d4b23474c8cd3c9576879?family=FF+Tisa+Sans" rel="stylesheet" type="text/css"/> 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="//db.onlinewebfonts.com/c/0b811799540d4b23474c8cd3c9576879?family=FF+Tisa+Sans"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="{%static 'project/homeStyle.css'%}">
-    <link rel="icon" type="image/png" href="{%static 'project/img/inCupNoText.png'%}">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{%static 'project/homeStyle.css'%}" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{%static 'project/img/inCupNoText.png'%}"
+    />
     <script src="{%static 'project/scripts/homeScript.js'%}"></script>
-</head>
+  </head>
 
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-
+  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
     <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand"><img src="{%static 'project/img/notext.png'%}" alt="logo"
-                        style="height: 40px; position:absolute; top: 5px; left: 2%;"></a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#about"><strong>ABOUT</strong></a></li>
-                    <li><a href="#services"><strong>PARTNERS</strong></a></li>
-                    <li><a href="#portfolio"><strong>MOTIVATION</strong></a></li>
-                    <li><a href="#contactUs"><strong>CONTACT</strong></a></li>
-                    <li><a href="{%url 'site-login'%}"><strong>SIGN IN</strong></a></li>
-                    <li><a href="{%url 'site-volunteer'%}"><strong>YOUR WORKFLOW</strong></a></li>
-                </ul>
-            </div>
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#myNavbar"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand"
+            ><img
+              src="{%static 'project/img/notext.png'%}"
+              alt="logo"
+              style="height: 40px; position: absolute; top: 5px; left: 2%"
+          /></a>
         </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#about"><strong>ABOUT</strong></a>
+            </li>
+            <li>
+              <a href="#services"><strong>PARTNERS</strong></a>
+            </li>
+            <li>
+              <a href="#portfolio"><strong>MOTIVATION</strong></a>
+            </li>
+            <li>
+              <a href="#contactUs"><strong>CONTACT</strong></a>
+            </li>
+            <li>
+              <a href="{%url 'site-login'%}"><strong>SIGN IN</strong></a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
     <div class="jumbotron text-center">
-
-
-
-        <h1>Food Donation System</h1>
-        <img src="{%static 'project/img/inCupText.png'%}"; class = "epic"  alt="logoPreview">
-        <div style="color:white; text-align: center; display: inline;">
-            <a href="{%url 'site-registration'%}" style="color:white;"><u>
-                    <p style="font-size:25.6px; position: relative; bottom: 10px;"><em class="material-icons"
-                            style="font-size: 25.6px;">input</em> JOIN US!</p>
-                </u></a>
-        </div>
+      <h1>Food Donation System</h1>
+      <img
+        src="{%static 'project/img/inCupText.png'%}"
+        ;
+        class="epic"
+        alt="logoPreview"
+      />
+      <div style="color: white; text-align: center; display: inline">
+        <a href="{%url 'site-registration'%}" style="color: white"
+          ><u>
+            <p style="font-size: 25.6px; position: relative; bottom: 10px">
+              <em class="material-icons" style="font-size: 25.6px">input</em>
+              JOIN US!
+            </p>
+          </u></a
+        >
+      </div>
     </div>
 
     <!-- Container (About Section) -->
     <div id="about" class="container-fluid">
-        <div class="row after">
-            <div class="col-sm-8">
-                <h2>How does it work?</h2><br>
-                <h4>Instead of wasting food in restaurants, the Delivery System helps providing the less fortunate
-                    people with food by connecting restaurants and food charities. The link can be anyone, even you!
-                    Sign up now and make the difference with us.</h4><br>
-                <br><a href="#contactUs"><h4 style="color:#007bff">Get in Touch</h4></a>
-            </div>
-            <div class="col-sm-4">
-                <span><img src="{%static 'project/img/Untitled.png'%}" alt="How It Works" style="width: 200px; height:200px"></span>
-            </div>
+      <div class="row after">
+        <div class="col-sm-8">
+          <h2>How does it work?</h2>
+          <br />
+          <h4>
+            Instead of wasting food in restaurants, the Delivery System helps
+            providing the less fortunate people with food by connecting
+            restaurants and food charities. The link can be anyone, even you!
+            Sign up now and make the difference with us.
+          </h4>
+          <br />
+          <br /><a href="#contactUs"
+            ><h4 style="color: #007bff">Get in Touch</h4></a
+          >
         </div>
-        <div class="row before">
-            <div class="col-sm-4">
-                <span><img src="{%static 'project/img/Untitled.png'%}" alt="How It Works" style="width: 200px; height:200px"></span>
-            </div>
-            <div class="col-sm-8">
-                <h2>How does it work?</h2><br>
-                <h4>Instead of wasting food in restaurants, the Delivery System helps providing the less fortunate
-                    people with food by connecting restaurants and food charities. The link can be anyone, even you!
-                    Sign up now and make the difference with us.</h4><br>
-                <br><a href="#contactUs"><h4 style="color:#007bff">Get in Touch</h4></a>
-            </div>
+        <div class="col-sm-4">
+          <span
+            ><img
+              src="{%static 'project/img/Untitled.png'%}"
+              alt="How It Works"
+              style="width: 200px; height: 200px"
+          /></span>
         </div>
+      </div>
+      <div class="row before">
+        <div class="col-sm-4">
+          <span
+            ><img
+              src="{%static 'project/img/Untitled.png'%}"
+              alt="How It Works"
+              style="width: 200px; height: 200px"
+          /></span>
+        </div>
+        <div class="col-sm-8">
+          <h2>How does it work?</h2>
+          <br />
+          <h4>
+            Instead of wasting food in restaurants, the Delivery System helps
+            providing the less fortunate people with food by connecting
+            restaurants and food charities. The link can be anyone, even you!
+            Sign up now and make the difference with us.
+          </h4>
+          <br />
+          <br /><a href="#contactUs"
+            ><h4 style="color: #007bff">Get in Touch</h4></a
+          >
+        </div>
+      </div>
     </div>
 
     <div class="container-fluid bg-grey">
-        <div class="row">
-            <div class="col-sm-4">
-                <span><img src="{%static 'project/img/mix.png'%}" alt="Our Values" style="width: 200px; height:200px"></span>
-            </div>
-            <div class="col-sm-8">
-                <h2>Our Values</h2><br>
-                <h4><strong style="color: #FF7F50">MISSION:</strong> Our mission is to elimate food waste, helping out people in the community
-                    who are going through difficult times. No one should be worried about where their next meal is
-                    coming from, and if they can afford it.</h4><br>
-                <h4><strong style="color: #FF7F50">VISION:</strong> We hope to one day eliminate food waste from all major food outlets,
-                    putting that food to good use, lowering the overall hunger and poverty issues faced by many around
-                    us.</h4>
-            </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <span
+            ><img
+              src="{%static 'project/img/mix.png'%}"
+              alt="Our Values"
+              style="width: 200px; height: 200px"
+          /></span>
         </div>
+        <div class="col-sm-8">
+          <h2>Our Values</h2>
+          <br />
+          <h4>
+            <strong style="color: #ff7f50">MISSION:</strong> Our mission is to
+            elimate food waste, helping out people in the community who are
+            going through difficult times. No one should be worried about where
+            their next meal is coming from, and if they can afford it.
+          </h4>
+          <br />
+          <h4>
+            <strong style="color: #ff7f50">VISION:</strong> We hope to one day
+            eliminate food waste from all major food outlets, putting that food
+            to good use, lowering the overall hunger and poverty issues faced by
+            many around us.
+          </h4>
+        </div>
+      </div>
     </div>
 
     <!-- Container (Services Section) -->
     <div id="services" class="container-fluid text-center">
-        <h2>PARTNERS</h2>
-        <br>
-        <div class="row slideanim">
-            <div class="col-sm-4" id = "dunkin">
-                <span><img src="{%static 'project/img/dunkinLogo.png'%}" class = "foodServices" alt="Dunkin Donuts" style="width: 150px; height:150px"></span>
-                <h4>Dunkin Donuts</h4>
-                <p>Food Outlet</p>
-            </div>
-            <div class="col-sm-4" id = "mcdnlds">
-                <span><img src="{%static 'project/img/mcdLogo.png'%}" class = "foodServices" alt="McDonalds" style="width: 150px; height:150px"></span>
-                <h4>McDonald's</h4>
-                <p>Food Outlet</p>
-            </div>
-            <div class="col-sm-4" id = "laffah">
-                <span><img src="{%static 'project/img/laffahLogo.png'%}" class = "foodServices" alt="Laffah" style="width: 150px; height:150px"></span>
-                <h4>Downtown Laffah</h4>
-                <p>Food Outlet</p>
-            </div>
+      <h2>PARTNERS</h2>
+      <br />
+      <div class="row slideanim">
+        <div class="col-sm-4" id="dunkin">
+          <span
+            ><img
+              src="{%static 'project/img/dunkinLogo.png'%}"
+              class="foodServices"
+              alt="Dunkin Donuts"
+              style="width: 150px; height: 150px"
+          /></span>
+          <h4>Dunkin Donuts</h4>
+          <p>Food Outlet</p>
         </div>
-        <br><br>
-        <div class="row slideanim">
-            <div class="col-sm-4" id = "qouz">
-                <span><img src="{%static 'project/img/food-use-bank.png'%}" class = "foodServices" alt="Food Bank" style="width: 150px; height:150px"></span>
-                <h4>Al Quoz, Dubai</h4>
-                <p>Food Bank</p>
-            </div>
-            <div class="col-sm-4" id = "nefsy">
-                <span><img src="{%static 'project/img/nefsy.png'%}" class = "foodServices" alt="Food Bank" style="width: 150px; height:150px"></span>
-                <h4>Nefsy, Dubai</h4>
-                <p>Food Bank</p>
-            </div>
-            <div class="col-sm-4" id = "dca">
-                <span><img src="{%static 'project/img/dubai-no-bg.png'%}" class = "foodServices" alt="Food Bank" style="width: 150px; height:150px"></span>
-                <h4 style="color:#303030;">Dubai Charity Association, Dubai</h4>
-                <p>Food Bank</p>
-            </div>
+        <div class="col-sm-4" id="mcdnlds">
+          <span
+            ><img
+              src="{%static 'project/img/mcdLogo.png'%}"
+              class="foodServices"
+              alt="McDonalds"
+              style="width: 150px; height: 150px"
+          /></span>
+          <h4>McDonald's</h4>
+          <p>Food Outlet</p>
         </div>
+        <div class="col-sm-4" id="laffah">
+          <span
+            ><img
+              src="{%static 'project/img/laffahLogo.png'%}"
+              class="foodServices"
+              alt="Laffah"
+              style="width: 150px; height: 150px"
+          /></span>
+          <h4>Downtown Laffah</h4>
+          <p>Food Outlet</p>
+        </div>
+      </div>
+      <br /><br />
+      <div class="row slideanim">
+        <div class="col-sm-4" id="qouz">
+          <span
+            ><img
+              src="{%static 'project/img/food-use-bank.png'%}"
+              class="foodServices"
+              alt="Food Bank"
+              style="width: 150px; height: 150px"
+          /></span>
+          <h4>Al Quoz, Dubai</h4>
+          <p>Food Bank</p>
+        </div>
+        <div class="col-sm-4" id="nefsy">
+          <span
+            ><img
+              src="{%static 'project/img/nefsy.png'%}"
+              class="foodServices"
+              alt="Food Bank"
+              style="width: 150px; height: 150px"
+          /></span>
+          <h4>Nefsy, Dubai</h4>
+          <p>Food Bank</p>
+        </div>
+        <div class="col-sm-4" id="dca">
+          <span
+            ><img
+              src="{%static 'project/img/dubai-no-bg.png'%}"
+              class="foodServices"
+              alt="Food Bank"
+              style="width: 150px; height: 150px"
+          /></span>
+          <h4 style="color: #303030">Dubai Charity Association, Dubai</h4>
+          <p>Food Bank</p>
+        </div>
+      </div>
     </div>
 
     <!-- Container (Portfolio Section) -->
     <div id="portfolio" class="container-fluid text-center bg-grey">
+      <h2>Inspirational Quotes</h2>
+      <div
+        id="myCarousel"
+        class="carousel slide text-center"
+        data-ride="carousel"
+      >
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
 
-        <h2>Inspirational Quotes</h2>
-        <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <h4>"Past years have emphasized on the importance of unity as<br>a vital necessity for providing a
-                        better life to the people, for ensuring<br>stability in the country and for realizing the hopes
-                        and aspirations of our people."<br><br><span>HH Late Sheikh Zayed bin Sultan Al Nahyan</span>
-                    </h4>
-                </div>
-                <div class="item">
-                    <h4><br>"Saving our planet, lifting people out of poverty, <br>advancing economic growth…these are
-                        one and the same fight.”<br><br><span>Ban Ki-moon, Eighth Secretary-General of the United
-                            Nations</span></h4>
-                </div>
-                <div class="item">
-                    <h4>“When a poor person dies of hunger, it has not happened because<br> God did not take care of him
-                        or her. It has happened because neither<br> you nor I wanted to give that person what he or she
-                        needed.”<br><br><span>Mother Teresa, Roman Catholic nun</span></h4>
-                </div>
-            </div>
-
-            <!-- Left and right controls -->
-            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <h4>
+              "Past years have emphasized on the importance of unity as<br />a
+              vital necessity for providing a better life to the people, for
+              ensuring<br />stability in the country and for realizing the hopes
+              and aspirations of our people."<br /><br /><span
+                >HH Late Sheikh Zayed bin Sultan Al Nahyan</span
+              >
+            </h4>
+          </div>
+          <div class="item">
+            <h4>
+              <br />"Saving our planet, lifting people out of poverty,
+              <br />advancing economic growth…these are one and the same
+              fight.”<br /><br /><span
+                >Ban Ki-moon, Eighth Secretary-General of the United
+                Nations</span
+              >
+            </h4>
+          </div>
+          <div class="item">
+            <h4>
+              “When a poor person dies of hunger, it has not happened because<br />
+              God did not take care of him or her. It has happened because
+              neither<br />
+              you nor I wanted to give that person what he or she needed.”<br /><br /><span
+                >Mother Teresa, Roman Catholic nun</span
+              >
+            </h4>
+          </div>
         </div>
+
+        <!-- Left and right controls -->
+        <a
+          class="left carousel-control"
+          href="#myCarousel"
+          role="button"
+          data-slide="prev"
+        >
+          <span
+            class="glyphicon glyphicon-chevron-left"
+            aria-hidden="true"
+          ></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="right carousel-control"
+          href="#myCarousel"
+          role="button"
+          data-slide="next"
+        >
+          <span
+            class="glyphicon glyphicon-chevron-right"
+            aria-hidden="true"
+          ></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
     </div>
 
     <form id="contactUs">
-        <div class="form-row text-center">
-            <div class="form-group col-md-12">
-                <h2>Contact us</h2>
-            </div>
+      <div class="form-row text-center">
+        <div class="form-group col-md-12">
+          <h2>Contact us</h2>
         </div>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" placeholder="Name" required id="name" name="name">
-            </div>
-            <div class="form-group col-md-6">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" placeholder="Email" required id="email" name="email">
-            </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Name"
+            required
+            id="name"
+            name="name"
+          />
         </div>
-        <div class="form-row">
-            <div class="form-group col-md-12">
-                <label for="msg">Message</label>
-                <textarea class="form-control" rows="4" id="msg" name="msg" placeholder="Message" required></textarea>
-            </div>
+        <div class="form-group col-md-6">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            placeholder="Email"
+            required
+            id="email"
+            name="email"
+          />
         </div>
-        <div class="form-row">
-            <div class="form-group col-md-12">
-                <button type="submit" class="btn">Send!</button>
-            </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label for="msg">Message</label>
+          <textarea
+            class="form-control"
+            rows="4"
+            id="msg"
+            name="msg"
+            placeholder="Message"
+            required
+          ></textarea>
         </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <button type="submit" class="btn">Send!</button>
+        </div>
+      </div>
     </form>
 
     <footer class="container-fluid bg-grey">
-        <div class="text-center">
-            <a href="#myPage" title="To Top">
-                <span class="glyphicon glyphicon-chevron-up"></span>
-            </a>
-        </div>
+      <div class="text-center">
+        <a href="#myPage" title="To Top">
+          <span class="glyphicon glyphicon-chevron-up"></span>
+        </a>
+      </div>
 
-        <div style = "color: #404969">
-            <p>Contact us and we'll get back to you within 24 hours.</p>
-            <p><span class="glyphicon glyphicon-map-marker"></span> Sharjah United Arab Emirates</p>
-            <p><span class="glyphicon glyphicon-phone"></span> +971 6-386-3424</p>
-            <p><span class="glyphicon glyphicon-envelope"></span> inquiry@foodDonationSystem.com</p>
-        </div>
+      <div style="color: #404969">
+        <p>Contact us and we'll get back to you within 24 hours.</p>
+        <p>
+          <span class="glyphicon glyphicon-map-marker"></span> Sharjah United
+          Arab Emirates
+        </p>
+        <p><span class="glyphicon glyphicon-phone"></span> +971 6-386-3424</p>
+        <p>
+          <span class="glyphicon glyphicon-envelope"></span>
+          inquiry@foodDonationSystem.com
+        </p>
+      </div>
     </footer>
-
-</body>
-
+  </body>
 </html>

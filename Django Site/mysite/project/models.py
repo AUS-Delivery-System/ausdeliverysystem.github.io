@@ -1,5 +1,10 @@
 from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
+#User.objects.only('role').filter(email__iexact='G@gmail.com',password='1234567890zZ')
+#__iexact to ignore case sensative, = for full match
+
+#User.objects.filter(email__iexact='G@gmail.com',password='1234567890zZ').first().role
+#gets role of user with same email, case insensative, and perfect matching password
 
 # Create your models here.
 class User(models.Model):

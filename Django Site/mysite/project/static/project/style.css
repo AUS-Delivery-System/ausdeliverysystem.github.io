@@ -1,186 +1,204 @@
 @import url(//db.onlinewebfonts.com/c/0b811799540d4b23474c8cd3c9576879?family=FF+Tisa+Sans);
-@font-face
-{font-family: "FF Tisa Sans"; src: url("//db.onlinewebfonts.com/t/0b811799540d4b23474c8cd3c9576879.eot"); src: url("//db.onlinewebfonts.com/t/0b811799540d4b23474c8cd3c9576879.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/0b811799540d4b23474c8cd3c9576879.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/0b811799540d4b23474c8cd3c9576879.woff") format("woff"), url("//db.onlinewebfonts.com/t/0b811799540d4b23474c8cd3c9576879.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/0b811799540d4b23474c8cd3c9576879.svg#FF Tisa Sans") format("svg"); } 
-form
-{
-    margin-left: 30%;
-    margin-right:30%;
-    margin-top: 3%;
-    color:#FF7F50;
-    font-family:"FF Tisa Sans"
+
+@font-face {
+    font-family: "FF Tisa Sans";
+    src: url("//db.onlinewebfonts.com/t/0b811799540d4b23474c8cd3c9576879.eot");
+    src: url("//db.onlinewebfonts.com/t/0b811799540d4b23474c8cd3c9576879.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/0b811799540d4b23474c8cd3c9576879.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/0b811799540d4b23474c8cd3c9576879.woff") format("woff"), url("//db.onlinewebfonts.com/t/0b811799540d4b23474c8cd3c9576879.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/0b811799540d4b23474c8cd3c9576879.svg#FF Tisa Sans") format("svg");
 }
-label
-{
+
+form {
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 3%;
+    color: #FF7F50;
+    font-family: "FF Tisa Sans"
+}
+
+label {
     font-size: 18px;
     color: #FF7F50;
-    font-family:"FF Tisa Sans"
+    font-family: "FF Tisa Sans"
 }
-button
-{
-    font-family:"FF Tisa Sans";
+
+button {
+    font-family: "FF Tisa Sans";
 }
+
 .btn1 {
-    background-color:#e6f5fc;
-    color:#FF7F50;
+    background-color: #e6f5fc;
+    color: #FF7F50;
 }
-.btn1:hover
-{
-    background-color:#FF7F50;
-    color:#e6f5fc;
+
+.btn1:hover {
+    background-color: #FF7F50;
+    color: #e6f5fc;
 }
-.btnSelected
-{
-    background-color:#FF7F50;
-    color:#e6f5fc;
+
+.btnSelected {
+    background-color: #FF7F50;
+    color: #e6f5fc;
     font-size: 115%;
 }
-footer 
-{
-    width:100%;
-    height:100%;
-    padding:27px;
+
+footer {
+    width: 100%;
+    height: 100%;
+    padding: 27px;
     margin-top: 7.5%;
     bottom: 10%;
-    background-color:#FF7F50;
-    text-align:center;
-    font-size:19px;
-    font-family:"FF Tisa Sans";
+    background-color: #FF7F50;
+    text-align: center;
+    font-size: 19px;
+    font-family: "FF Tisa Sans";
     float: bottom;
 }
-footer a
-{
-    color:#e6f5fc;
+
+footer a {
+    color: #e6f5fc;
 }
-footer a:hover
-{
-    color:#404969;
+
+footer a:hover {
+    color: #404969;
 }
+
 body {
-    font-family:"FF Tisa Sans";
-    background-color:#e6f5fc;
-    height:100%;
+    font-family: "FF Tisa Sans";
+    background-color: #e6f5fc;
+    height: 100%;
     width: 100%;
     min-height: 100%;
 }
 
-h2{
-    font-family:"FF Tisa Sans";
+h2 {
+    font-family: "FF Tisa Sans";
     margin-left: 8.5%;
-    margin-right: 2.5%; 
+    margin-right: 2.5%;
     color: #e6f5fc;
 }
-h3
-{
-    font-family:"FF Tisa Sans";
-    color:#FF7F50;
+
+h3 {
+    font-family: "FF Tisa Sans";
+    color: #FF7F50;
 }
-.loginCentered
-{
-    font-family:"FF Tisa Sans";
+
+.loginCentered {
+    font-family: "FF Tisa Sans";
     text-align: center;
     margin-right: 25%;
     margin-left: 25%;
 }
-img
-{
-    position:absolute;
+
+img {
+    position: absolute;
     top: 5px;
     left: 2%;
-    width : 100px; 
-    height:auto;
+    width: 100px;
+    height: auto;
 }
-@media screen and (max-width: 1000px){
 
-footer
-{
-    margin-top: 10%;
-    padding:48.5px;
+@media screen and (max-width: 1000px) {
+
+    footer {
+        margin-top: 10%;
+        padding: 48.5px;
+    }
+
+    footer a:hover {
+        color: #404969;
+    }
+
+    img {
+        position: absolute;
+        top: 3px;
+        left: 2%;
+        width: 50px;
+        height: auto;
+        margin-right: 5%;
+    }
+
+    h2 {
+        font-family: "FF Tisa Sans";
+        color: #e6f5fc;
+        text-align: center;
+        font-size: large;
+    }
+
+    .navbar-toggler-icon {
+        position: absolute;
+        top: 3px;
+        right: 2%;
+        width: 50px;
+        height: auto;
+        margin-left: 5%;
+    }
+
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    form {
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 7%;
+        width: 80%;
+        color: #FF7F50;
+        font-family: "FF Tisa Sans"
+    }
+
+    .register-form {
+        margin-top: 20%;
+    }
 }
-footer a:hover
-{
-    color:#404969;
-}
-img
-{
-    position:absolute;
-    top: 3px;
-    left: 2%;
-    width : 50px; 
-    height:auto;
-    margin-right: 5%;
-}
-h2{
-    font-family:"FF Tisa Sans"; 
+
+
+.login-main-text {
+    font-family: "FF Tisa Sans";
     color: #e6f5fc;
-    text-align: center;
-    font-size: large;
-}
-.navbar-toggler-icon
-{
-    position:absolute;
-    top: 3px;
-    right: 2%;
-    width : 50px; 
-    height:auto;
-    margin-left: 5%;
-}
-.navbar-collapse
-{
-    text-align: center;
-}
-form
-{
-    margin-left: 10%;
-    margin-right:10%;
-    margin-top:7%;
-    width:80%;
-    color:#FF7F50;
-    font-family:"FF Tisa Sans"
-}
-.register-form{
-    margin-top: 20%;
-}
-}
-
-
-.login-main-text{
-    font-family:"FF Tisa Sans";
-    color: #e6f5fc;
-    background-color:#FF7F50;
+    background-color: #FF7F50;
     padding: 50px;
 }
 
-.login-main-text h2{
-    font-family:"FF Tisa Sans";
+.login-main-text h2 {
+    font-family: "FF Tisa Sans";
     font-weight: 300;
 }
-p{
-    font-size:16px;
+
+p {
+    font-size: 16px;
 }
+
 #volunteerForm {
     display: none;
 }
+
 #bError {
     display: none;
 }
+
 #vError {
     display: none;
 }
+
 #oError {
     display: none;
 }
+
 #foodForm {
     display: none;
 }
+
 #bankForm {
     display: none;
 }
+
 #navbarToggler {
     display: none;
 }
+
 #stop_it {
     display: none;
 }
+
 #footer {
     display: none;
 }

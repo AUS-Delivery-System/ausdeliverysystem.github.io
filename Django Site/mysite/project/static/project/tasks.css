@@ -4,42 +4,42 @@ body {
     font-family: 'Varela Round', sans-serif;
     font-size: 13px;
 }
-.navbar 
-{
+
+.navbar {
     background-color: #FF7F50;
-    color:#e6f5fc;
-    padding:1%;
+    color: #e6f5fc;
+    padding: 1%;
     border-radius: 0;
 }
-.navbar-header a
-{
+
+.navbar-header a {
     margin-bottom: 20%;
-    color:#e6f5fc;
+    color: #e6f5fc;
 }
 
-.rightSideNav
-{
+.rightSideNav {
     position: absolute;
     right: 0%;
     margin-top: 1.9%;
-    font-size:16px;
-    margin-right: 2%;   
-    color:#e6f5fc;
+    font-size: 16px;
+    margin-right: 2%;
+    color: #e6f5fc;
 }
-.rightSideNav a:hover 
-{
-    color:#FF7F50;
-    background-color:#e6f5fc;
+
+.rightSideNav a:hover {
+    color: #FF7F50;
+    background-color: #e6f5fc;
 }
-.rightSideNav a:active 
-{
-    color:#FF7F50;
-    background-color:#e6f5fc;
+
+.rightSideNav a:active {
+    color: #FF7F50;
+    background-color: #e6f5fc;
 }
-.rightSideNav a
-{
-    color:#e6f5fc;
+
+.rightSideNav a {
+    color: #e6f5fc;
 }
+
 .table-responsive {
     margin: 30px 0;
 }
@@ -307,78 +307,85 @@ table.table .avatar {
 .modal form label {
     font-weight: normal;
 }
+
 @import url(//db.onlinewebfonts.com/c/0b811799540d4b23474c8cd3c9576879?family=FF+Tisa+Sans);
-@font-face
-{font-family: "FF Tisa Sans"; src: url("//db.onlinewebfonts.com/t/0b811799540d4b23474c8cd3c9576879.eot"); src: url("//db.onlinewebfonts.com/t/0b811799540d4b23474c8cd3c9576879.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/0b811799540d4b23474c8cd3c9576879.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/0b811799540d4b23474c8cd3c9576879.woff") format("woff"), url("//db.onlinewebfonts.com/t/0b811799540d4b23474c8cd3c9576879.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/0b811799540d4b23474c8cd3c9576879.svg#FF Tisa Sans") format("svg"); } 
-form
-{
-    margin-left: 30%;
-    margin-right:30%;
-    margin-top:5%;
-    color:#FF7F50;
-    font-family:"FF Tisa Sans"
+
+@font-face {
+    font-family: "FF Tisa Sans";
+    src: url("//db.onlinewebfonts.com/t/0b811799540d4b23474c8cd3c9576879.eot");
+    src: url("//db.onlinewebfonts.com/t/0b811799540d4b23474c8cd3c9576879.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/0b811799540d4b23474c8cd3c9576879.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/0b811799540d4b23474c8cd3c9576879.woff") format("woff"), url("//db.onlinewebfonts.com/t/0b811799540d4b23474c8cd3c9576879.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/0b811799540d4b23474c8cd3c9576879.svg#FF Tisa Sans") format("svg");
 }
 
-label
-{
+form {
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 5%;
+    color: #FF7F50;
+    font-family: "FF Tisa Sans"
+}
+
+label {
     font-size: 18px;
     color: #FF7F50;
-    font-family:"FF Tisa Sans"
+    font-family: "FF Tisa Sans"
 }
-button
-{
-    font-family:"FF Tisa Sans";
+
+button {
+    font-family: "FF Tisa Sans";
 }
+
 .btn1 {
-    background-color:#e6f5fc;
-    color:#FF7F50;
+    background-color: #e6f5fc;
+    color: #FF7F50;
 }
-.btn1:hover
-{
-    background-color:#FF7F50;
-    color:#e6f5fc;
+
+.btn1:hover {
+    background-color: #FF7F50;
+    color: #e6f5fc;
 }
-.btnSelected
-{
-    background-color:#FF7F50;
-    color:#e6f5fc;
+
+.btnSelected {
+    background-color: #FF7F50;
+    color: #e6f5fc;
 }
-form
-{
+
+form {
     margin-left: 30%;
-    margin-right:30%;
-    margin-top:2.5%;
-    color:#FF7F50;
-    font-family:"FF Tisa Sans"
+    margin-right: 30%;
+    margin-top: 2.5%;
+    color: #FF7F50;
+    font-family: "FF Tisa Sans"
 }
-footer 
-{
-    padding:29.5px;
+
+footer {
+    padding: 29.5px;
     margin-top: 5%;
-    background-color:#FF7F50;
-    text-align:center;
-    font-size:20px;
-    font-family:"FF Tisa Sans";
+    background-color: #FF7F50;
+    text-align: center;
+    font-size: 20px;
+    font-family: "FF Tisa Sans";
 }
-footer a
-{
-    color:#e6f5fc;
+
+footer a {
+    color: #e6f5fc;
 }
+
 body {
-    font-family:"FF Tisa Sans";
-    background-color:#e6f5fc;
+    font-family: "FF Tisa Sans";
+    background-color: #e6f5fc;
 }
-h2{
-    font-family:"FF Tisa Sans"
+
+h2 {
+    font-family: "FF Tisa Sans"
 }
-h3
-{
-    font-family:"FF Tisa Sans";
-    color:#FF7F50;
+
+h3 {
+    font-family: "FF Tisa Sans";
+    color: #FF7F50;
 }
-.loginCentered
-{
-    font-family:"FF Tisa Sans";
+
+.loginCentered {
+    font-family: "FF Tisa Sans";
     text-align: center;
     margin-right: 25%;
     margin-left: 25%;
@@ -386,43 +393,65 @@ h3
 
 @media screen and (max-width: 450px) {
 
-    .register-form{
+    .register-form {
         margin-top: 5%;
     }
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
 
-    .register-form{
+    .register-form {
         margin-top: 20%;
     }
 }
 
 
-.login-main-text{
-    font-family:"FF Tisa Sans";
+.login-main-text {
+    font-family: "FF Tisa Sans";
     color: #e6f5fc;
-    background-color:#FF7F50;
+    background-color: #FF7F50;
     padding: 50px;
 }
 
-.login-main-text h2{
-    font-family:"FF Tisa Sans";
+.login-main-text h2 {
+    font-family: "FF Tisa Sans";
     font-weight: 300;
 }
-p{
-    font-size:16px;
+
+p {
+    font-size: 16px;
 }
 
-.btn
-{
-  background-color:#007bff;
-  color: White;
-  font-family:"FF Tisa Sans";
+.btn {
+    background-color: #007bff;
+    color: White;
+    font-family: "FF Tisa Sans";
 }
-.btn:hover
-{
-  background-color:#0069D9;
-  color: White;
-  font-family:"FF Tisa Sans";
+
+.btn:hover {
+    background-color: #0069D9;
+    color: White;
+    font-family: "FF Tisa Sans";
+}
+
+#contactUs {
+    display: "none";
+}
+
+#bankForm {
+    display: "none";
+}
+
+#ongoingTask {
+    display: "block";
+}
+
+#changePass {
+    display: "none";
+}
+
+.activeButton {
+    color: #FF7F50;
+    background-color: #e6f5fc;
+    font-size: 115%;
 }

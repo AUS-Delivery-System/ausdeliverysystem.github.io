@@ -1,7 +1,8 @@
-body{
+body {
   height: 100%;
 }
-.location{
+
+.location {
   border-radius: 50%;
   background-color: antiquewhite;
 }
@@ -11,6 +12,6 @@ body{
   height: 500px;
   width: 80%;
   margin-bottom: 2%;
-  margin-left:2%;
-  margin-right:2%;
+  margin-left: 2%;
+  margin-right: 2%;
 }
