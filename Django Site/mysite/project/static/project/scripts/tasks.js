@@ -3,7 +3,8 @@ window.onload = function () {
 	document.getElementById("volunteerForm").style.display = "none";
 	document.getElementById("ongoingTask").style.display = "none";
 	document.getElementById("changePass").style.display = "none";
-
+	document.getElementById("deleteForm").style.display = "none";
+	
 }
 
 function showTasks() {

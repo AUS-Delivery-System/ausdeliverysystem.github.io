@@ -50,6 +50,7 @@
         Food Donation System
       </h2>
     </div>
+    {%if request.session.username is None %}
     <form
       action="#"
       method="post"
@@ -107,6 +108,9 @@
       </div>
       <p>Return to <a href="{%url 'site-home'%}">Homepage</a>.</p>
     </form>
+    {% else %}
+    <h2 style="color: #000000;">Welcome back {{ request.session.username }}!!</h2>
+    {% endif %}
     <footer>
       <a href="../#contactUs">Contact us!</a>
     </footer>

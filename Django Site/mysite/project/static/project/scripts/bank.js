@@ -74,11 +74,11 @@ function moreInfo() {
 }
 
 function claimTask() {
-	var conf = confirm("Are you sure you want to claim this task?");
+	var conf = confirm("Mark task as Delivered?");
 
 	if (conf == true) {
 		document.getElementById("viewTasks").style.display = "none";
-		document.getElementById("ongoingTask").style.display = "block";
-		alert("Task claimed!");
+		document.getElementById("ongoingTask").style.display = "none";
+		alert("Task marked as delivered!");
 	}
 }

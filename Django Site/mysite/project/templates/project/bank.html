@@ -73,14 +73,17 @@
                                 class="glyphicon glyphicon-question-sign"></span>Support</a></li>
                     <li><a href="#Settings" onClick="showSettings()" id="settings"><span
                                 class="glyphicon glyphicon-cog"></span> Settings</a></li>
-                    <li><a href="{%url 'site-home'%}"><span class="glyphicon glyphicon-log-out"></span> Sign Out</a>
+                    <li><a href="{%url 'site-logout'%}"><span class="glyphicon glyphicon-log-out"></span> Sign Out</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 <!--good-->
-    <h2 style="padding-left: 2%; padding-right: 2%;">Welcome back <strong>Nefsy!</strong></h2>
+    
+    <h2 style="padding-left: 2%; padding-right: 2%">
+      Welcome back <strong>{{ request.session.name }}!</strong>
+    </h2>
     <div id="ongoingTask">
         <div>
             <h2 style="padding-left: 2%; padding-right: 2%;"><strong>Upcoming Delivery:</strong> Volunteer Ahmad picking
@@ -109,7 +112,6 @@
                                 <th>Driver Name</th>
                                 <th>Driver N</th>
                                 <th>Status</th>
-                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -122,7 +124,7 @@
                                 <th>On the Way</th>
                                 <td>
                                     <a onclick="claimTask();" href="#editEmployeeModal" class="edit"><i
-                                            class="glyphicon glyphicon-ok" title="Mark Picked Up"></i></a>
+                                            class="glyphicon glyphicon-ok" title="Mark Delivered"></i></a>
                                 </td>
                             </tr>
                         </tbody>
@@ -213,7 +215,7 @@
                                             aria-hidden="true">&times;</button>
                                     </div>
                                     <div class="modal-body">
-                                        <p>Are you sure you want to delete these Records?</p>
+                                        <p>Are you sure you want to mark as Delivered?</p>
                                         <p class="text-warning"><small>This action cannot be undone.</small></p>
                                     </div>
                                     <div class="modal-footer">
@@ -312,6 +314,17 @@
                                     Changes</button>
                             </div>
                         </div>
+                        <div class="form-row">
+        <div class="form-group col-md-12">
+          <button
+          style="background-color:#dc3545;"
+            type="button"
+            class="btn btn-danger"
+          >
+            <a style="color:#FFFFFF;" href="{%url 'site-delete'%}" onclick="return confirm('Are you sure?')">DELETE ACCOUNT</a>
+          </button>
+        </div>
+      </div>
                     </form>
                     
 <!--4 /divs missing???-->
